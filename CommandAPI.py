@@ -7,6 +7,11 @@ import LiveReload
 import webbrowser
 import os
 
+try:
+    from .server.PluginAPI import PluginInterface as Plugin
+except ValueError:
+    from server.PluginAPI import PluginInterface as Plugin
+
 
 class LiveReloadTest(sublime_plugin.ApplicationCommand):
 
@@ -27,8 +32,8 @@ class LiveReloadEnablePluginCommand(sublime_plugin.ApplicationCommand):
 
     def on_done(self, index):
         if index != -1:
-            LiveReload.Plugin.togglePlugin(index)
+            Plugin.togglePlugin(index)
 
     def run(self):
-        sublime.active_window().show_quick_panel(LiveReload.Plugin.listPlugins(),
+        sublime.active_window().show_quick_panel(Plugin.listPlugins(),
                 self.on_done)

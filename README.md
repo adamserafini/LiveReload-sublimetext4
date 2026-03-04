@@ -1,6 +1,6 @@
-# LiveReload for Sublime Text 3
+# LiveReload for Sublime Text 3 and 4
 
-A web browser page reloading plugin for the [Sublime Text 3](http://sublimetext.com "Sublime Text 3") editor.
+A web browser page reloading plugin for the [Sublime Text](http://sublimetext.com "Sublime Text") editor.
 
 ## Installing
 
@@ -23,6 +23,14 @@ git clone https://github.com/alepez/LiveReload-sublimetext3 LiveReload
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 rm -rf LiveReload
 git clone https://github.com/alepez/LiveReload-sublimetext3 LiveReload
+```
+
+### Manual install, OSX users (Sublime Text 4)
+
+```
+cd ~/Library/Application\ Support/Sublime\ Text/Packages/
+rm -rf LiveReload
+git clone https://github.com/adamserafini/LiveReload-sublimetext4 LiveReload
 ```
 
 # Using
