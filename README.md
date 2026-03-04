@@ -1,6 +1,6 @@
-# LiveReload for Sublime Text 3
+# LiveReload for Sublime Text 3 and 4
 
-A web browser page reloading plugin for the [Sublime Text 3](http://sublimetext.com "Sublime Text 3") editor.
+A web browser page reloading plugin for the [Sublime Text](http://sublimetext.com "Sublime Text") editor.
 
 ## Installing
 
