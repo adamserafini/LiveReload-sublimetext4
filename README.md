@@ -25,6 +25,14 @@ rm -rf LiveReload
 git clone https://github.com/alepez/LiveReload-sublimetext3 LiveReload
 ```
 
+### Manual install, OSX users (Sublime Text 4)
+
+```
+cd ~/Library/Application\ Support/Sublime\ Text/Packages/
+rm -rf LiveReload
+git clone https://github.com/adamserafini/LiveReload-sublimetext4 LiveReload
+```
+
 # Using
 
 Enable desired plug-ins via Command Palette (Ctrl+Shift+P) add livereload.js to you html document.
