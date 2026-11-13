@@ -12,6 +12,7 @@ try:
 except ImportError:
     from urllib.parse import urlparse
 
+import os
 import sys
 
 # HTTP handler with WebSocket upgrade support
@@ -24,7 +25,9 @@ class WSRequestHandler(SimpleHTTPRequestHandler):
         addr,
         ):
 
-        SimpleHTTPRequestHandler.__init__(self, req, addr, object())
+        # Python 3.7+ calls os.getcwd() without `directory`, failing if plugin_host's cwd was deleted
+        kwargs = {'directory': os.path.dirname(os.path.abspath(__file__))} if sys.version_info >= (3, 7) else {}
+        SimpleHTTPRequestHandler.__init__(self, req, addr, object(), **kwargs)
 
         self.server_version = 'LiveReload/1.0'
 
