@@ -33,7 +33,8 @@ class Settings(dict):
             data = read_sublime_settings(self.file_name) or {}
 
             # Merging user settings
-            self.user_file_name = os.path.join(cdir, '..', '..', 'User', 'LiveReload.sublime-settings')
+            # packages_path(), not __file__: package dir may be a symlink to a folder elsewhere
+            self.user_file_name = os.path.join(sublime.packages_path(), 'User', 'LiveReload.sublime-settings')
             data_user = read_sublime_settings(self.user_file_name) or {}
 
             for i in data:
